@@ -1,5 +1,4 @@
-
-const parentElement = document.querySrlrctor(".katas-list")
+const parentElement = document.body
 const div1 = document.createElement("div")
 const div2 = document.createElement("div")
 const div3 = document.createElement("div")
@@ -15,6 +14,9 @@ const div12 = document.createElement("div")
 const div13 = document.createElement("div")
 const div14 = document.createElement("div")
 const div15 = document.createElement("div")
+const div16 = document.createElement("div")
+const div17 = document.createElement("div")
+const div18 = document.createElement("div")
 
 const sampleArray = [
     469, 755, 244, 245, 758, 450, 302, 20, 712, 71,
@@ -26,11 +28,12 @@ div1.append("kata 1: ")
 parentElement.append(div1)
 
 for (let i = 1; i <= 20; i += 1) {
-    kataHeading.append(i + " ")
-    parentElement.append(kata1Heading)
+    parentElement.append(i + " ")
 }
 
 //kata 2
+div2.append("kata 2: ")
+parentElement.append(div2)
 
 for (let i = 2; i <= 20; i += 2) {
     parentElement.append(i + " ")
@@ -41,7 +44,7 @@ div3.append("kata 3: ")
 parentElement.append(div3)
 
 for (let i = 2; i <= 20; i += 2) {
-    kataHeading.append(i + " ")
+    //kataHeading.append(i + " ")
     parentElement.append(i + " ")
 }
 
@@ -49,8 +52,7 @@ for (let i = 2; i <= 20; i += 2) {
 div4.append("kata 4: ")
 parentElement.append(div4)
 
-for (let i = 2; i <= 20; i += 2) {
-    kataHeading.append(i + " ")
+for (let i = 5; i <= 100; i += 5) {
     parentElement.append(i + " ")
 }
 
@@ -59,7 +61,7 @@ div5.append("kata 5: ")
 parentElement.append(div5)
 
 for (let i = 1; i <= 10; i += 1) {
-    parentElement.append(i + " ")
+    parentElement.append(i * i + " ")
 }
 
 
@@ -67,23 +69,23 @@ for (let i = 1; i <= 10; i += 1) {
 div6.append("kata 6: ")
 parentElement.append(div6)
 
-for (let i = 1; i <= 10; i += 1) {
+for (let i = 20; i >= 1; i -= 1) {
     parentElement.append(i + " ")
 }
 
 //kata 7
-div6.append("kata 6: ")
-parentElement.append(div6)
+div7.append("kata 7: ")
+parentElement.append(div7)
 
-for (let i = 1; i <= 10; i += 1) {
+for (let i = 20; i >= 1; i -= 2) {
     parentElement.append(i + " ")
 }
 
 //kata 8
-div6.append("kata 6: ")
-parentElement.append(div6)
+div8.append("kata 8: ")
+parentElement.append(div8)
 
-for (let i = 1; i <= 10; i += 1) {
+for (let i = 19; i >= 1; i -= 2) {
     parentElement.append(i + " ")
 }
 
@@ -91,7 +93,7 @@ for (let i = 1; i <= 10; i += 1) {
 div9.append("kata 9: ")
 parentElement.append(div9)
 
-for (let i = 100; i <= 1; i += 5) {
+for (let i = 100; i >= 1; i -= 5) {
     parentElement.append(i + " ")
 }
 
@@ -100,8 +102,8 @@ for (let i = 100; i <= 1; i += 5) {
 div10.append("kata 10: ")
 parentElement.append(div10)
 
-for (let counter10 = 10; counter10 >= 1; counter10 -= 1) {
-    parentElement.append(counter10 * counter10 + " ")
+for (let i = 10; i >= 1; i -= 1) {
+    parentElement.append(i * i + " ")
 }
 
 //kata 11
@@ -109,7 +111,7 @@ div11.append("kata 11: ")
 parentElement.append(div11)
 
 for (let i = 0; i < sampleArray.length; i += 1) {
-    parentElement.append(counter10 * counter10 + " ")
+    parentElement.append(sampleArray[i] + " ")
 }
 
 
@@ -138,8 +140,7 @@ div14.append("kata 14: ")
 parentElement.append(div14)
 
 for (let i = 0; i < sampleArray.length; i += 1) {
-    if (sampleArray[i] % 2 === 1)
-        parentElement.append(sampleArray[i] * sampleArray[i] + " ")
+    parentElement.append(sampleArray[i] * sampleArray[i] + " ")
 }
 
 
@@ -151,48 +152,45 @@ parentElement.append(div15)
 let total15 = 0
 for (let i = 1; i <= 20; i += 1) {
     total15 += i;
-    if (i === 20) {
 
-    }
 }
-
+parentElement.append(total15)
 
 //kata 16
 div16.append("kata 16: ")
 parentElement.append(div16)
 
 let total16 = 0
-for (let i = 1; i < sampleArray.length; i += 1) {
+for (let i = 0; i < sampleArray.length; i += 1) {
     total16 += sampleArray[i];
 }
 parentElement.append(total16)
-
-    }
 
 
 //kata 17
 div17.append("kata 17: ")
 parentElement.append(div17)
 
-let total16 = 0
+let smallest = sampleArray[0]
 for (let i = 1; i < sampleArray.length; i += 1) {
-    total16 += sampleArray[i];
-}
-parentElement.append(total16)
-
+    if (smallest > sampleArray[i]) {
+        smallest = sampleArray[i]
     }
-
+}
+parentElement.append(smallest)
 
 //kata 18
 div18.append("kata 18: ")
 parentElement.append(div18)
 let largest = sampleArray[0]
 for (let i = 1; i < sampleArray.length; i += 1) {
-    if (largest < sampleArray.length; i += 1) {+= sampleArray[i];
+    if (largest < sampleArray[i]) {
+        largest = sampleArray[i]
     }
-    parentElement.append(total16)
-
 }
+parentElement.append(largest)
+
+
 
 
 
